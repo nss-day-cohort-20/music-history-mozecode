@@ -1,16 +1,45 @@
- body {width: 80%; margin: 0 auto;}
+ body, .sliderstyle, button{width: 80%; margin: 0 auto; padding:0; font-family: 'Open Sans';}
 
- header {background-color: pink; border: 1px solid black; margin-bottom: 10px; }
+ header {background-color: #FFB4B0; border: 1px solid black; margin-bottom: 10px; }
 
-  ul {display:flex; justify-content: flex-start; }
+  ul, .songinfo ul {display:flex; justify-content: flex-start; }
 
   li:last-child {list-style: none;}
- 
- .borderright {list-style: none; border-right:2px solid black; padding-right: 10px; margin-right: 10px;}
 
-  
+form > div, section>input {display: flex; flex-direction: column;}
+
+
+
+  /* created classes*/
+ .borderright, .songinfo li{list-style: none; border-right:2px solid black; padding-right: 10px; margin-right: 10px;}
+
+ .songinfo li {height:auto;}
+
+ .checkbox li {list-style: none; width:50%; float:left; display: inline;}
+
  .bluecontainer
- {background-color:#42b9f4 ; width:30%;}
+ {background-color: #4DD7FA  ; width:20%; margin-right: 20px; padding:20px; }
 
- .whitecontainer
- {width:70%;}
+ .yellowcontainer
+ {width:80%; background-color: #FEFAC0;  }
+
+ .sidebyside
+ {display:flex;}
+
+ .borderstyle {border:2px solid black;}
+
+ 
+.rounded {border-radius:5px;}
+
+.checkbox ul 
+ { }
+
+
+.flexcenter
+{justify-content: center;}
+
+.songinfo h2{font-weight: bold; color: #785616; padding-left:40px; }
+
+.floatleft{float:left;}
+.floatright{float:right;}
+

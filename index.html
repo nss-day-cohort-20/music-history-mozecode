@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="main.css" >
 </head>
 
@@ -16,92 +17,126 @@
 		</ul>
 	</header>
 
-	<section>
-	<div class="bluecontainer">
-		<form action="" method="">
-			<div>
-				<label for="slider">Song length:</label>
-				
-				<input type="range" id="slider" min= "0" max="name="song-length">
-			</div>	
+	<section class="sidebyside flexcenter">
+		<div class="bluecontainer borderstyle">
+			<form action="" method="post">
+				<div>
+					<label for="slider">Song length:</label>
+					
+					<input class="sliderstyle borderstyle rounded" type="range" id="slider" min= "0" max="name="song-length">
+				</div>	
 
-			<div>	
-				<label for="artist-drop">Artist:</label>
-				<select id="artist-drop" name="artist">
-					<option>Grateful Dead</option>
-					<option>Adele</option>
-					<option>Hozier</option>
-					<option>Fleetwood Mac</option>
-					<option>Enya</option>
-				</select>
-			</div>
+				<div>	
+					<label for="artist-drop">Artist:</label>
+					<br>
+					<select class="sliderstyle borderstyle rounded" id="artist-drop" name="artist">
+						<option>Grateful Dead</option>
+						<option>Adele</option>
+						<option>Hozier</option>
+						<option>Fleetwood Mac</option>
+						<option>Enya</option>
+					</select>
+				</div>
+				<br>
+				<div>
+					<label for="album-drop">Album:</label>
+					<br>
+					<select class="sliderstyle borderstyle rounded" id="album-drop" name="album">
+						<option>One From the Vault</option>
+						<option>21</option>
+						<option>From Eden</option>
+						<option>The Dance</option>
+						<option>Shepherd Moons</option>
+					</select>
+				</div>
+				<br>
+
+				<div>
+					
+					<label>Genre:</label>
+
+					<section class="checkbox ">
+						 <ul>
+						 	<li><input class="rounded" type="checkbox" id="rock" name="genre" value="genre-rock"> </li>
+						
+							<li><label for="rock">Rock </label></li>
+						
+						
+						
+							<li><input class="rounded"type="checkbox" id="pop" name="genre" value="genre-pop"></li>
+							<li><label for="pop"> Pop </label></li>
+					
+						
+						
+							<li><input class="rounded"type="checkbox" id="blues" name="genre" value="genre-blues"></li>
+							<li><label for="blues"> Blues </label></li>
+					
+										
+					
+
+							<li><input class="rounded borderstyle"type="checkbox" id="classical" name="genre" value="genre-classical"></li>
+							<li><label for="classical"> Classical</label></li>
+					
+
+					
+							<li><input class="rounded borderstyle"type="checkbox" id="jazz" name="genre" value="genre-jazz"></li>
+							<li><label for="jazz"> Jazz </label></li>
+
+					
+							<li><input class="rounded borderstyle"type="checkbox" id="hip-hop" name="genre" value="genre-hiphop"></li>
+							<li><label for="hip-hop"> Hip-Hop </label></li>
+						</ul>
+
+					</section>
+				</div>
+				
+				<button class="borderstyle rounded" type="submit" id="btn-submit" name="filter">Filter</button> 
+
+			</form>
+		</div> <!--end of bluecontainer-->
+
+		<div class="yellowcontainer borderstyle">
 			
-			<div>
-				<label for="album-drop">Album:</label>
-				<select id="album-drop" name="album">
-					<option>One From the Vault</option>
-					<option>21</option>
-					<option>From Eden</option>
-					<option>The Dance</option>
-					<option>Shepherd Moons</option>
-				</select>
+			<div class="songinfo">
+				<h2>Eyes of the World/Drums</h2>
+				<ul>
+					<li>Grateful Dead</li>
+					<li>One From the Vault</li>
+					<li>Rock</li>
+				</ul>
 			</div>
 
-			<div>
-				<label>Genre:</label>
-
-
-				<input type="checkbox" id="rock" name="genre" value="genre-rock"> <label for="rock"> Rock </label>
-				
-				<input type="checkbox" id="pop" name="genre" value="genre-pop">	<label for="pop"> Pop </label>
-				
-				<input type="checkbox" id="blues" name="genre" value="genre-blues">	<label for="blues"> Blues </label>
-
-				<input type="checkbox" id="classical" name="genre" value="genre-classical">	<label for="classical"> Classical</label>
-
-				<input type="checkbox" id="jazz" name="genre" value="genre-jazz">	<label for="jazz"> Jazz </label>
-
-				<input type="checkbox" id="hip-hop" name="genre" value="genre-hiphop"><label for="hip-hop"> Hip-Hop </label>
+			<div class="songinfo">
+				<h2>Set Fire to the Rain</h2>
+					<ul>
+						<li>Adele</li>
+						<li>21</li>
+						<li>Pop</li>
+					</ul>
 			</div>
-			
-			<button type="submit" id="btn-submit" name="filter">Filter</button> 
 
-		</form>
-	</div> <!--end of bluecontainer-->
+			<div class="songinfo">
+				<h2>Arsonist's Lullabye</h2>
+				<ul>
+					<li>Hozier</li>
+					<li>From Eden</li>
+					<li>Rock</li>
+				</ul>
+				
+			</div>
 
-<div class="whitecontainer">
-	
-	<div>
-		<h2>"Eyes of the World"/"Drums"</h2>
-		<h3>Grateful Dead</h3>
-		<h3>One From the Vault</h3>
-		<h3>Rock</h3>
-	</div>
+			<div class="songinfo">
+				<h2>Bleed to Love Her</h2>
+				<ul>
+					<li>Fleetwood Mac</li>
+					<li>The Dance</li>
+					<li>Rock</li>
+				</ul>
+			</div>
 
-	<div>
-		<h2>Set Fire to the Rain</h2>
-		<h3>Adele</h3>
-		<h3>21</h3>
-		<h3>Pop</h3>
-	</div>
+		
 
-	<div>
-		<h2>Arsonist's Lullabye</h2>
-		<h3>Grateful Dead</h3>
-		<h3>One From the Vault</h3>
-		<h3>Rock</h3>
-	</div>
-
-	<div>
-		<h2>Bleed to Love Her</h2>
-		<h3>Fleetwood Mac</h3>
-		<h3>The Dance</h3>
-		<h3>Rock</h3>
-	</div>
-
-	
-
-</div> <!--end of whitecontainer-->
-</section>
+		</div> <!--end of yellowcontainer-->
+	</section>
 </body>
 </html>
