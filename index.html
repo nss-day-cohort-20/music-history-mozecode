@@ -17,7 +17,7 @@
 		</ul>
 	</header>
 
-	<section class="sidebyside flexcenter">
+	<section class="sidebyside">
 		<div class="bluecontainer borderstyle">
 			<form action="" method="post">
 				<div>
@@ -51,45 +51,51 @@
 				</div>
 				<br>
 
-				<div>
+				<div >
 					
 					<label>Genre:</label>
 
 					<section class="checkbox ">
-						 <ul>
-						 	<li><input class="rounded" type="checkbox" id="rock" name="genre" value="genre-rock"> </li>
+						 
+						 <div>
+						 	<input class="rounded" type="checkbox" id="rock" name="genre" value="genre-rock"> 
 						
-							<li><label for="rock">Rock </label></li>
+							<label for="rock">Rock </label>
+						</div>
 						
+						<div>
+							<input class="rounded"type="checkbox" id="blues" name="genre" value="genre-blues">
+							<label for="blues"> Pop </label>
+						</div>
 						
-						
-							<li><input class="rounded"type="checkbox" id="pop" name="genre" value="genre-pop"></li>
-							<li><label for="pop"> Pop </label></li>
+						<div>
+							<input class="rounded"type="checkbox" id="pop" name="genre" value="genre-pop">
+							<label for="pop"> Blues </label>
+						</div>
+									
 					
-						
-						
-							<li><input class="rounded"type="checkbox" id="blues" name="genre" value="genre-blues"></li>
-							<li><label for="blues"> Blues </label></li>
-					
-										
+						<div>
+							<input class="rounded borderstyle"type="checkbox" id="classical" name="genre" value="genre-classical">
+
+							<label for="classical"> Classical</label>
+
+						</div>
 					
 
-							<li><input class="rounded borderstyle"type="checkbox" id="classical" name="genre" value="genre-classical"></li>
-							<li><label for="classical"> Classical</label></li>
-					
+						<div>
+							<input class="rounded borderstyle"type="checkbox" id="jazz" name="genre" value="genre-jazz">
+							<label for="jazz"> Jazz </label>
+						</div>
 
 					
-							<li><input class="rounded borderstyle"type="checkbox" id="jazz" name="genre" value="genre-jazz"></li>
-							<li><label for="jazz"> Jazz </label></li>
-
-					
-							<li><input class="rounded borderstyle"type="checkbox" id="hip-hop" name="genre" value="genre-hiphop"></li>
-							<li><label for="hip-hop"> Hip-Hop </label></li>
-						</ul>
+						<div>
+							<input class="rounded borderstyle"type="checkbox" id="hip-hop" name="genre" value="genre-hiphop">
+							<label for="hip-hop"> Hip-Hop </label>
+						</div>
 
 					</section>
 				</div>
-				
+				<br>
 				<button class="borderstyle rounded" type="submit" id="btn-submit" name="filter">Filter</button> 
 
 			</form>

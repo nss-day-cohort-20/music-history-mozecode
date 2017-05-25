@@ -15,8 +15,7 @@ form > div, section>input {display: flex; flex-direction: column;}
 
  .songinfo li {height:auto;}
 
- .checkbox li {list-style: none; width:50%; float:left; display: inline;}
-
+ 
  .bluecontainer
  {background-color: #4DD7FA  ; width:20%; margin-right: 20px; padding:20px; }
 
@@ -31,15 +30,12 @@ form > div, section>input {display: flex; flex-direction: column;}
  
 .rounded {border-radius:5px;}
 
-.checkbox ul 
- { }
+.checkbox{display: flex; flex-wrap: wrap;}
 
+.checkbox>div {flex:1 50%;}
 
-.flexcenter
-{justify-content: center;}
 
 .songinfo h2{font-weight: bold; color: #785616; padding-left:40px; }
 
-.floatleft{float:left;}
-.floatright{float:right;}
+
 
