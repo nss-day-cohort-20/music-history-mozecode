@@ -39,7 +39,8 @@ form > div, section>input
  .sidebyside
  {display:flex;}
 
- .borderstyle {border:2px solid black;}
+ .borderstyle {border:2px solid black; }
+ .outline{outline: 2px solid black; }
  
 .rounded {border-radius:5px;}
 
@@ -53,6 +54,8 @@ form > div, section>input
 	{font-weight: bold; 
 	color: #785616; 
 	padding-left:40px; }
+
+
 
 
 
