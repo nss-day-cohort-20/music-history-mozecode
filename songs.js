@@ -29,9 +29,7 @@ for(var j=0; j<songs.length; j++){
  //string- split?  look at slice later
  //and put into arrays or object to be accessed
  //below?
-
  //what about genre?
-
 
 function addSongToDiv(message) {
     var wrapperDiv = document.getElementById("wrapper");
@@ -45,6 +43,7 @@ console.log ("songs[i]",songs[i]);
 }
 
 console.log ("songs", songs);
+
 var html = "";
 
 function iterateThroughArray(arr) {
@@ -65,6 +64,4 @@ function iterateThroughArray(arr) {
  addSongToDiv(html);
 }
 
-
 iterateThroughArray(songs);
-
