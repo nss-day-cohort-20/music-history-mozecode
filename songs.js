@@ -1,3 +1,8 @@
+//iterate through and remove unwanted characters and words
+//replace > with -
+//add a song to the beginning and end of the array
+//add each string to the DOM in the right place
+
 var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -12,18 +17,17 @@ var newSong2 = songs.unshift("Arsonist's Lullabye - by Hozier on the album From 
 
 for(var j=0; j<songs.length; j++){
 
-    songs[j] = songs[j].replace (/@/g, '');   
+    songs[j] = songs[j].replace (/@/g, '');
     songs[j] = songs[j].replace (/\(/g, '');
     songs[j] = songs[j].replace (/\*/g, '');
     //have to use an escape character to do ( and *
-    songs[j] = songs[j].replace (/!/g, ''); 
+    songs[j] = songs[j].replace (/!/g, '');
     songs[j] = songs[j].replace (/>/g, "-");
 }
 
-//make it one big string, find index of items I need
  //need song title, artist, album separated from
- //string 
- //and put into arrays or object to be accessed 
+ //string- split?  look at slice later
+ //and put into arrays or object to be accessed
  //below?
 
  //what about genre?
@@ -34,30 +38,33 @@ function addSongToDiv(message) {
     wrapperDiv.innerHTML = message;
 }
 
+for (var i = 0; i < songs.length; i++){
+
+songs[i] = songs[i].split(/ - by | on the album /);
+console.log ("songs[i]",songs[i]);
+}
+
+console.log ("songs", songs);
 var html = "";
 
 function iterateThroughArray(arr) {
-    
     for (var i = 0; i < songs.length; i++) {
-        
-            message =`<div class="songinfo">
-				<h2>${  }</h2>
+
+         message =`<div class="songinfo">
+				<h2>${songs[i][0]}</h2>
 				<ul>
-					<li>${  }</li>
-					<li>${  }</li>
-					<li>Rock</li>
+					<li>${songs[i][1]}</li>
+					<li>${songs[i][2]}</li>
+					<li>Genre</li>
 				</ul>
 			</div>`
 
-        html += message;
-        
-        
+            html += message;
+
     }
  addSongToDiv(html);
 }
-//iterate through and remove unwanted characters and words
-//replace > with -
-//add a song to the beginning and end of the array
-//add each string to the DOM in the right place
+
 
 iterateThroughArray(songs);
+
