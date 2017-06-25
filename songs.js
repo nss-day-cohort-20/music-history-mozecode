@@ -37,8 +37,10 @@ addBtn.addEventListener("click", function(){
     songString.push(sInput);
     songString.push(sArtist);
     songString.push(alb);
-    songs.push(songString);
-   iterateThroughArray(songs);
+    let newSongInput=songs.unshift(songString);//in the array, but won't print
+
+ sidebyside.classList.toggle("isHidden");
+ addMusic.classList.toggle("isHidden");
 })
 
 linkAdd.addEventListener("click", function(){
@@ -88,6 +90,7 @@ console.log ("songs[i]",songs[i]);
 
 console.log ("songs", songs);
 
+
 var html = "";
 
 function iterateThroughArray(arr) {
@@ -107,5 +110,7 @@ function iterateThroughArray(arr) {
     }
  addSongToDiv(html);
 }
+
+console.log ("songsArray", songs);
 
 iterateThroughArray(songs);
