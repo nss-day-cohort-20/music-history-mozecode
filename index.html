@@ -15,39 +15,39 @@
 	<body>
 		<header>
 			<ul>
-				<li class="borderright">View Music</li>
-				<li class="borderright"><a href="#">Add Music</a></li>
+				<li class="borderright" ><a id="linkView" class="disabled" href="#sidebyside"> View Music </a></li>
+				<li class="borderright"><a id="linkAdd" href="#addMusic">Add Music</a></li>
 				<li><a href="#">Profile</a></li>
 			</ul>
 		</header>
-		<div class="isHidden addMusic">
+		<div class="isHidden addMusic" id="addMusic">
 				<row>
 					<div class="col-md-12">
 						<div class="col-md-12">
 							<label for="">Song Name</label>
-							<input type="text" name="songName" id="songName">
+							<input class="borderstyle" type="text" name="songName" id="songName">
 						</div>
 						<br>
 						<br>
 						<div class="col-md-12">
 							<label for="artist">Artist</label>
-							<input type="text" name="artist" id="artist">
+							<input class= "borderstyle" type="text" name="artist" id="artist">
 						</div>
 						<br>
 						<br>
 						<div class="col-md-12">
 							<label for="album">Album</label>
-							<input type="text" name="album" id="album">
+							<input class="borderstyle" type="text" name="album" id="album">
 						</div>
 
 						<br>
 						<br>
-						<button type="submit">Add</button>
+						<button id="addBtn"class="borderstyle rounded" type="submit">Add</button>
 					</div>
 
 				</row>
 			</div>
-		<section class="sidebyside">
+		<section class="sidebyside" id="sidebyside">
 
 			<div class="bluecontainer borderstyle">
 				<form action="" method="post">

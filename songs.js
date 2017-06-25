@@ -5,6 +5,53 @@
 
 var songs = [];
 
+let linkView= document.getElementById("linkView");
+let linkAdd = document.getElementById("linkAdd");
+let addMusic = document.getElementById("addMusic");
+let sidebyside = document.getElementById("sidebyside");
+let songName= document.getElementById("songName");
+let artist= document.getElementById("artist");
+let album= document.getElementById("album");
+let addBtn= document.getElementById("addBtn");
+
+function getSong(){
+    let songInput=songName.value;
+    return songInput;
+}
+
+function getArtist(){
+    let songArtist = artist.value;
+    return songArtist;
+}
+
+function getAlbum(){
+    let songAlbum = album.value;
+    return songAlbum;
+}
+
+addBtn.addEventListener("click", function(){
+    let sInput=getSong();
+    let sArtist=getArtist();
+    let alb=getAlbum();
+    let songString = [];
+    songString.push(sInput);
+    songString.push(sArtist);
+    songString.push(alb);
+    songs.push(songString);
+   iterateThroughArray(songs);
+})
+
+linkAdd.addEventListener("click", function(){
+    addMusic.classList.toggle("isHidden");
+    sidebyside.classList.toggle("isHidden");
+    linkView.classList.toggle("disabled");
+    linkView.addEventListener("click", function(){
+        addMusic.classList.toggle("isHidden");
+        sidebyside.classList.toggle("isHidden");
+    })
+})
+
+
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
 songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
@@ -25,13 +72,13 @@ for(var j=0; j<songs.length; j++){
     songs[j] = songs[j].replace (/>/g, "-");
 }
 
- //need song title, artist, album separated from
- //string
 
 function addSongToDiv(message) {
     var wrapperDiv = document.getElementById("wrapper");
     wrapperDiv.innerHTML = message;
 }
+
+ //need song title, artist, album separated from string
 
 for (var i = 0; i < songs.length; i++){
 

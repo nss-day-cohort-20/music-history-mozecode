@@ -90,6 +90,9 @@ button#btn-submit.borderstyle.rounded {
 	margin-left: 9em;
 }
 
+.disabled{
+	pointer-events: none;
+}
 
 
 
