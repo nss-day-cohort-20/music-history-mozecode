@@ -75,7 +75,19 @@ button#btn-submit.borderstyle.rounded {
 }
 
 .addMusic{
+	justify-content: center;
+	text-align: center;
 
+}
+
+.addMusic label{
+
+	position:absolute;
+}
+
+.addMusic input{
+
+	margin-left: 9em;
 }
 
 
