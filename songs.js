@@ -26,10 +26,7 @@ for(var j=0; j<songs.length; j++){
 }
 
  //need song title, artist, album separated from
- //string- split?  look at slice later
- //and put into arrays or object to be accessed
- //below?
- //what about genre?
+ //string
 
 function addSongToDiv(message) {
     var wrapperDiv = document.getElementById("wrapper");

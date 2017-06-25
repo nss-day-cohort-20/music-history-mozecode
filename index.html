@@ -1,151 +1,147 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="main.css" >
-</head>
-
-<body>
-	<header>
-		<ul>
-			<li class="borderright">View Music</li>
-			<li class="borderright"><a href="#">Add Music</a></li>
-			<li><a href="#">Profile</a></li>
-		</ul>
-	</header>
-
-	<section class="sidebyside">
-		<div class="bluecontainer borderstyle">
-			<form action="" method="post">
-				<div>
-					<label for="slider">Song length:</label>
-					
-					<input class="sliderstyle borderstyle rounded" type="range" id="slider" min= "0" max="name="song-length">
-				</div>	
-
-				<div>	
-					<label for="artist-drop">Artist:</label>
+	<head>
+		<meta charset="utf-8">
+		<title>Music History</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="main.css" >
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li class="borderright">View Music</li>
+				<li class="borderright"><a href="#">Add Music</a></li>
+				<li><a href="#">Profile</a></li>
+			</ul>
+		</header>
+		<section class="sidebyside">
+			<div class="isHidden addMusic">
+				<row>
+					<div class="col=-md-3">
+					</div>
+					<div class="col-md-6">
+						<label for=""></label>
+						<input type="text" name="">
+						<br>
+						<label for=""></label>
+						<input type="text" name="">
+						<br>
+						<label for=""></label>
+						<input type="text" name="">
+						<br>
+						<br>
+						<button>Add</button>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</row>
+			</div>
+			<div class="bluecontainer borderstyle">
+				<form action="" method="post">
+					<div>
+						<label for="slider">Song length:</label>
+						<input class="sliderstyle borderstyle rounded" type="range" id="slider" min= "0" max="name="song-length">
+					</div>
+					<div>
+						<label for="artist-drop">Artist:</label>
+						<br>
+						<select class="sliderstyle borderstyle rounded" id="artist-drop" name="artist">
+							<option>Options</option>
+							<option>Grateful Dead</option>
+							<option>Adele</option>
+							<option>Hozier</option>
+							<option>Fleetwood Mac</option>
+							<option>Enya</option>
+						</select>
+					</div>
 					<br>
-					<select class="sliderstyle borderstyle rounded" id="artist-drop" name="artist">
-						<option>Options</option>
-						<option>Grateful Dead</option>
-						<option>Adele</option>
-						<option>Hozier</option>
-						<option>Fleetwood Mac</option>
-						<option>Enya</option>
-					</select>
-				</div>
-				<br>
-				<div>
-					<label for="album-drop">Album:</label>
+					<div>
+						<label for="album-drop">Album:</label>
+						<br>
+						<select class="sliderstyle borderstyle rounded" id="album-drop" name="album">
+							<option>Options</option>
+							<option>One From the Vault</option>
+							<option>21</option>
+							<option>From Eden</option>
+							<option>The Dance</option>
+							<option>Shepherd Moons</option>
+						</select>
+					</div>
 					<br>
-					<select class="sliderstyle borderstyle rounded" id="album-drop" name="album">
-						<option>Options</option>
-						<option>One From the Vault</option>
-						<option>21</option>
-						<option>From Eden</option>
-						<option>The Dance</option>
-						<option>Shepherd Moons</option>
-					</select>
-				</div>
-				<br>
-
-				<div >
-					
-					<label>Genre:</label>
-
-					<section class="checkbox ">
-						 
-						 <div>
-						 	<input class="outline" type="checkbox" id="rock" name="genre" value="genre-rock"> 
-						
-							<label for="rock">Rock </label>
-						</div>
-
-						<div>
-							<input class="outline"type="checkbox" id="jazz" name="genre" value="genre-jazz">
-							<label for="jazz"> Jazz </label>
-						</div>
-						
-						<div>
-							<input class="outline"type="checkbox" id="pop" name="genre" value="genre-pop">
-							<label for="pop"> Pop </label>
-						</div>					
-					
-
-						<div>
-							<input class="outline"type="checkbox" id="classical" name="genre" value="genre-classical">
-
-							<label for="classical"> Classical</label>
-
-						</div>
-						<div>
-							<input class="outline"type="checkbox" id="blues" name="genre" value="genre-blues">
-							<label for="blues"> Blues </label>
-						</div>
-					
-						<div>
-							<input class="outline"type="checkbox" id="hip-hop" name="genre" value="genre-hiphop">
-							<label for="hip-hop"> Hip-Hop </label>
-						</div>
-
-
-
-					</section>
-				</div>
-				<br>
-				<button class="borderstyle rounded" type="submit" id="btn-submit" name="filter">Filter</button> 
-
-			</form>
-		</div> <!--end of bluecontainer-->
-
-		<div class="yellowcontainer borderstyle" id = "wrapper">
-			
-			<div class="songinfo">
-				<h2>Eyes of the World/Drums</h2>
-				<ul>
-					<li>Grateful Dead</li>
-					<li>One From the Vault</li>
-					<li>Rock</li>
-				</ul>
-			</div>
-
-			<div class="songinfo">
-				<h2>Set Fire to the Rain</h2>
-					<ul>
-						<li>Adele</li>
-						<li>21</li>
-						<li>Pop</li>
-					</ul>
-			</div>
-
-			<div class="songinfo">
-				<h2>Arsonist's Lullabye</h2>
-				<ul>
-					<li>Hozier</li>
-					<li>From Eden</li>
-					<li>Rock</li>
-				</ul>
-				
-			</div>
-
-			<div class="songinfo">
-				<h2>Bleed to Love Her</h2>
-				<ul>
-					<li>Fleetwood Mac</li>
-					<li>The Dance</li>
-					<li>Rock</li>
-				</ul>
-			</div>
-
-		
-
-		</div> <!--end of yellowcontainer-->
-	</section>
-
-	<script type="text/javascript"src="songs.js"></script>
-</body>
-</html>
+					<div >
+						<label>Genre:</label>
+						<section class="checkbox ">
+							<div>
+								<input class="outline" type="checkbox" id="rock" name="genre" value="genre-rock">
+								<label for="rock">Rock </label>
+							</div>
+							<div>
+								<input class="outline"type="checkbox" id="jazz" name="genre" value="genre-jazz">
+								<label for="jazz"> Jazz </label>
+							</div>
+							<div>
+								<input class="outline"type="checkbox" id="pop" name="genre" value="genre-pop">
+								<label for="pop"> Pop </label>
+							</div>
+							<div>
+								<input class="outline"type="checkbox" id="classical" name="genre" value="genre-classical">
+								<label for="classical"> Classical</label>
+							</div>
+							<div>
+								<input class="outline"type="checkbox" id="blues" name="genre" value="genre-blues">
+								<label for="blues"> Blues </label>
+							</div>
+							<div>
+								<input class="outline"type="checkbox" id="hip-hop" name="genre" value="genre-hiphop">
+								<label for="hip-hop"> Hip-Hop </label>
+							</div>
+						</section>
+					</div>
+					<br>
+					<button class="borderstyle rounded" type="submit" id="btn-submit" name="filter">Filter</button>
+				</form>
+				</div> <!--end of bluecontainer-->
+				<div class="yellowcontainer borderstyle" id = "wrapper">
+					<div class="songinfo">
+						<h2>Eyes of the World/Drums</h2>
+						<ul>
+							<li>Grateful Dead</li>
+							<li>One From the Vault</li>
+							<li>Rock</li>
+						</ul>
+					</div>
+					<div class="songinfo">
+						<h2>Set Fire to the Rain</h2>
+						<ul>
+							<li>Adele</li>
+							<li>21</li>
+							<li>Pop</li>
+						</ul>
+					</div>
+					<div class="songinfo">
+						<h2>Arsonist's Lullabye</h2>
+						<ul>
+							<li>Hozier</li>
+							<li>From Eden</li>
+							<li>Rock</li>
+						</ul>
+					</div>
+					<div class="songinfo">
+						<h2>Bleed to Love Her</h2>
+						<ul>
+							<li>Fleetwood Mac</li>
+							<li>The Dance</li>
+							<li>Rock</li>
+						</ul>
+					</div>
+					</div> <!--end of yellowcontainer-->
+				</section>
+				<script type="text/javascript"src="songs.js"></script>
+			</body>
+		</html>
