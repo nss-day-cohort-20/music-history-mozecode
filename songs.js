@@ -38,7 +38,7 @@ addBtn.addEventListener("click", function(){
     songString.push(sArtist);
     songString.push(alb);
     let newSongInput=songs.unshift(songString);//in the array, but won't print
-
+iterateThroughArray(songs);
  sidebyside.classList.toggle("isHidden");
  addMusic.classList.toggle("isHidden");
 })
@@ -91,9 +91,11 @@ console.log ("songs[i]",songs[i]);
 console.log ("songs", songs);
 
 
-var html = "";
+
 
 function iterateThroughArray(arr) {
+    var html = "";
+    addSongToDiv("");
     for (var i = 0; i < songs.length; i++) {
 
          message =`<div class="songinfo">
@@ -113,4 +115,4 @@ function iterateThroughArray(arr) {
 
 console.log ("songsArray", songs);
 
-iterateThroughArray(songs);
+
