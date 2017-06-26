@@ -29,6 +29,12 @@ function getAlbum(){
     return songAlbum;
 }
 
+function clearContent(){
+    songName.value="";
+    artist.value ="";
+    album.value ="";
+}
+
 addBtn.addEventListener("click", function(){
     let sInput=getSong();
     let sArtist=getArtist();
@@ -41,6 +47,7 @@ addBtn.addEventListener("click", function(){
 iterateThroughArray(songs);
  sidebyside.classList.toggle("isHidden");
  addMusic.classList.toggle("isHidden");
+clearContent();
 })
 
 linkAdd.addEventListener("click", function(){
@@ -94,7 +101,7 @@ console.log ("songs", songs);
 
 
 function iterateThroughArray(arr) {
-    var html = "";
+    var html = "";//start with a blank slate
     addSongToDiv("");
     for (var i = 0; i < songs.length; i++) {
 
