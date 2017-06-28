@@ -5,6 +5,62 @@
 
 var songs = [];
 
+let linkView= document.getElementById("linkView");
+let linkAdd = document.getElementById("linkAdd");
+let addMusic = document.getElementById("addMusic");
+let sidebyside = document.getElementById("sidebyside");
+let songName= document.getElementById("songName");
+let artist= document.getElementById("artist");
+let album= document.getElementById("album");
+let addBtn= document.getElementById("addBtn");
+
+function getSong(){
+    let songInput=songName.value;
+    return songInput;
+}
+
+function getArtist(){
+    let songArtist = artist.value;
+    return songArtist;
+}
+
+function getAlbum(){
+    let songAlbum = album.value;
+    return songAlbum;
+}
+
+function clearContent(){
+    songName.value="";
+    artist.value ="";
+    album.value ="";
+}
+
+addBtn.addEventListener("click", function(){
+    let sInput=getSong();
+    let sArtist=getArtist();
+    let alb=getAlbum();
+    let songString = [];
+    songString.push(sInput);
+    songString.push(sArtist);
+    songString.push(alb);
+    let newSongInput=songs.unshift(songString);//in the array, but won't print
+iterateThroughArray(songs);
+ sidebyside.classList.toggle("isHidden");
+ addMusic.classList.toggle("isHidden");
+clearContent();
+})
+
+linkAdd.addEventListener("click", function(){
+    addMusic.classList.toggle("isHidden");
+    sidebyside.classList.toggle("isHidden");
+    linkView.classList.toggle("disabled");
+    linkView.addEventListener("click", function(){
+        addMusic.classList.toggle("isHidden");
+        sidebyside.classList.toggle("isHidden");
+    })
+})
+
+
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
 songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
@@ -25,16 +81,13 @@ for(var j=0; j<songs.length; j++){
     songs[j] = songs[j].replace (/>/g, "-");
 }
 
- //need song title, artist, album separated from
- //string- split?  look at slice later
- //and put into arrays or object to be accessed
- //below?
- //what about genre?
 
 function addSongToDiv(message) {
     var wrapperDiv = document.getElementById("wrapper");
     wrapperDiv.innerHTML = message;
 }
+
+ //need song title, artist, album separated from string
 
 for (var i = 0; i < songs.length; i++){
 
@@ -44,9 +97,12 @@ console.log ("songs[i]",songs[i]);
 
 console.log ("songs", songs);
 
-var html = "";
+
+
 
 function iterateThroughArray(arr) {
+    var html = "";//start with a blank slate
+    addSongToDiv("");
     for (var i = 0; i < songs.length; i++) {
 
          message =`<div class="songinfo">
@@ -64,4 +120,6 @@ function iterateThroughArray(arr) {
  addSongToDiv(html);
 }
 
-iterateThroughArray(songs);
+console.log ("songsArray", songs);
+
+
